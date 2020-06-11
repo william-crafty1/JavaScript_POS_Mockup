@@ -1,0 +1,12 @@
+body {
+    margin: 0px;
+    height: 100vh;
+}
+
+header {
+    background-color: black;
+    color: whitesmoke;
+    font-family: 'Anton', sans-serif;;
+    padding: 10px;
+    padding-left: 50px;
+}
