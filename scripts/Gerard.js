@@ -5,9 +5,11 @@ class Payment {
     }
 
 amountPaid(number) {
-    if (number >= amountDue) {
+    if (number >= this.amountDue) {
       this.cashTendered += number;
-    } else {
+    } else if (number > this.amountDue) {
+      console.log(giveChange());
+    }  else {
       alert("You're payment was not accepted, please try again!");
     };
   };
@@ -72,7 +74,10 @@ amountPaid(number) {
   };
 };
 
-let enterAmount = document.getElementById("money-input");
-enterAmount.addEventListener('submit', amountPaid(event) {
-    event.preventDefault();
-});
+// let enterAmount = document.getElementById("money-input");
+// enterAmount.addEventListener('submit', amountPaid(event) {
+//     event.preventDefault();
+// });
+
+// let amountDue = 40;
+// function amountPaid(60);
