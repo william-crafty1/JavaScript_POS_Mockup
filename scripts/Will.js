@@ -1,8 +1,9 @@
 class Hero {
-    constructor(name, phone, description) {
+    constructor(name, phone, description, price) {
         this.name = name;
         this.phone = phone;
         this.description = description;
+        this.price = price;
     }
 }
 
@@ -11,8 +12,8 @@ class HeroList {
         this.services = [];
     }
 
-    add(name, phone, description) {
-        this.services.push(new Hero(name, phone, description));
+    add(name, phone, description, price) {
+        this.services.push(new Hero(name, phone, description, price));
     }
 
     deleteAt(index) {
@@ -32,16 +33,35 @@ let Heroes = new HeroList();
 Heroes.add(
     "Justice Man",
     "555-555-5555",
-    "I fight for justice and equality for everyone"
+    "I fight for justice and equality for everyone",
+    "$100/hr"
 );
 Heroes.add(
     "Captain Planet",
     "777-777-7777",
-    "I bring pollution down to zero with the help of my eco team"
+    "I bring pollution down to zero with the help of my eco team",
+    "$5/hr"
 );
 Heroes.add(
     "Medical Gal",
     "123-456-CURE",
-    "I help fight diseases of all shapes, the doctor is IN"
+    "I help fight diseases of all shapes, the doctor is IN",
+    "$150/hr"
 );
 console.log(Heroes);
+
+let HeroesContainer = document.querySelector("MainShopPage");
+
+function displayHeroes(){
+    Heroes.services.forEach((hero, index) => {
+        let product = document.createElement("div");
+        product.classList.add("product");
+        let name = document.createElement("p");
+        name.innerText = `Name: ${hero.name}`;
+        let phone = document.createElement('p');
+        phone.innerText = `Phone ${hero.phone}`;
+    });
+
+};
+
+displayHeroes();
