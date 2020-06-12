@@ -1,18 +1,9 @@
 class Payment {
-    constructor(amountDue) {
-      this.amountDue = amountDue;
-      this.cashTendered = 0;
-    }
-
-amountPaid(number) {
-    if (number >= this.amountDue) {
-      this.cashTendered += number;
-    } else if (number > this.amountDue) {
-      console.log(giveChange());
-    }  else {
-      alert("You're payment was not accepted, please try again!");
-    };
-  };
+  constructor(amountDue) {
+    this.amountDue = amountDue;
+    this.cashTendered = 0;
+    this.changeReturned = 0;
+  }
 
   giveChange() {
     let hundreds = 0;
@@ -41,7 +32,7 @@ amountPaid(number) {
         tens++;
       } else if (changeLeft >= 5) {
         changeLeft -= 5;
-        fives++; 
+        fives++;
       } else if (changeLeft >= 1) {
         changeLeft -= 1;
         singles++;
@@ -59,25 +50,29 @@ amountPaid(number) {
         pennies++;
       }
     }
-    return {
-      hundreds: hundreds,  
-      fifties: fifties,  
-      twenties: twenties,  
-      tens: tens,  
-      fives: fives,  
-      singles: singles,  
+     return {
+      hundreds: hundreds,
+      fifties: fifties,
+      twenties: twenties,
+      tens: tens,
+      fives: fives,
+      singles: singles,
       quarters: quarters,
       dimes: dimes,
       nickels: nickels,
       pennies: pennies
     };
   };
+  amountPaid(number) {
+    if (number === this.amountDue) {
+      this.cashTendered += number;
+    } else if (number > this.amountDue) {
+      console.log(this.giveChange());
+    } else {
+      alert("You're payment was not accepted, please try again!");
+    };
+  };
 };
 
-// let enterAmount = document.getElementById("money-input");
-// enterAmount.addEventListener('submit', amountPaid(event) {
-//     event.preventDefault();
-// });
-
-// let amountDue = 40;
-// function amountPaid(60);
+let payment = new Payment(100);
+payment.amountPaid(150)
