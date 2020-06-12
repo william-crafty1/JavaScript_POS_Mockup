@@ -1,20 +1,40 @@
+/* Desktop View 
+Garret to do Mobile View*/
 body {
+    display: flex;
+    flex-direction: column;
     margin: 0px;
     height: 100vh;
 }
 
 header {
     display: flex;
-    background-color: black;
-    color: whitesmoke;
+    background-color: #0075B3;
+    color: #FFFB00;
     font-family: 'Reem Kufi', sans-serif;
     padding: 10px;
     padding-left: 50px;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
 }
 
-/*  */
-@media screen and (min-width: 768px) {
+.cart{
+    padding: 20px;
+    border-radius: 50%;
+    margin-right: 20px;
+    font-size: 20px;
+    border-style: none;
+    color: #0075B3;
+    
+}
+
+.product {
+    position: relative;
+    border-radius: 10px;
 
 }
+
+
+/* @media screen and (min-width: 768px) {
+
+} */
