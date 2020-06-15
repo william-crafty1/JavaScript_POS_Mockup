@@ -50,7 +50,7 @@ Heroes.add(
 );
 console.log(Heroes);
 
-let HeroesContainer = document.querySelector("MainShopPage");
+let HeroesContainer = document.querySelector(".MainShopPage");
 
 function displayHeroes(){
     Heroes.services.forEach((hero, index) => {
@@ -59,7 +59,15 @@ function displayHeroes(){
         let name = document.createElement("p");
         name.innerText = `Name: ${hero.name}`;
         let phone = document.createElement('p');
-        phone.innerText = `Phone ${hero.phone}`;
+        phone.innerText = `Phone: ${hero.phone}`;
+        let description = document.createElement('p');
+        description.innerText = `Description: ${hero.description}`;
+        let price = document.createElement('p');
+        price.innerText = `Price: ${hero.price}`;
+        let buyButton = document.createElement("button");
+        buyButton.innerText = "Add to cart";
+        product.append(name, phone, description, price, buyButton);
+        HeroesContainer.append(product);
     });
 
 };
