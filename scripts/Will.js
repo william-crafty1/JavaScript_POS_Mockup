@@ -66,9 +66,9 @@ function displayHeroes(){
         description.innerText = `Description: ${hero.description}`;
         let price = document.createElement('p');
         price.innerText = `Price: ${hero.price}`;
-        let buyButton = document.createElement("button");
-        buyButton.classList.add("add2CartButton")
-        buyButton.innerText = "Add to cart";
+        let addToCart = document.createElement("button");
+        addToCart.classList.add("add2CartButton")
+        addToCart.innerText = "Add to cart";
         product.append(name, phone, description, price, buyButton);
         HeroesContainer.append(product);
     });
@@ -79,10 +79,10 @@ displayHeroes();
 
 // Adding a product to the cart
 // Count on cart should increase every time the "Add to Cart" button is pressed
-buyButton = document.querySelector(".add2CartButton");
-buyButton.addEventListener("click", (e) => {
+addToCart = document.querySelector(".add2CartButton");
+let productsInCart = [];
+addToCart.addEventListener("click", (e) => {
     e.preventDefault();
-    let productsInCart = [];
     let quantity = document.createElement("p");
     quantity.classList.add("cartCount");
     productsInCart.push(quantity);
