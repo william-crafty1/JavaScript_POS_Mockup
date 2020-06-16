@@ -87,5 +87,5 @@ addToCart.addEventListener("click", (e) => {
     quantity.classList.add("cartCount");
     productsInCart.push(quantity);
     cartButton.append(quantity);
-    quantity.innerText = productsInCart.length
+    quantity.innerText = productsInCart.length;
 });
