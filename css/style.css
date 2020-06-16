@@ -19,6 +19,7 @@ header {
 }
 
 .cart{
+    position: relative;
     padding: 20px;
     border-radius: 50%;
     margin-right: 20px;
@@ -26,6 +27,17 @@ header {
     border-style: none;
     color: #0075B3;
     
+}
+
+.cartCount{
+    background-color: #FF0F0D;
+    color: whitesmoke;
+    border-radius: 50px;
+    position: absolute;
+    font-size: 13px;
+    padding: 5px;
+    bottom: 28px;
+    left: 40px;
 }
 
 .MainShopPage{
@@ -45,4 +57,13 @@ header {
 /* @media screen and (min-width: 768px) {
 Garrett work flow: scaled vertical mobile flow
 } */
+}
+
+
+.add2CartButton {
+    background-color: #FF0F0D;
+    border-radius: 20px;
+    color: whitesmoke;
+    border-style: none;
+    padding: 10px;
 }
