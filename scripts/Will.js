@@ -55,7 +55,7 @@ let cartButton = document.querySelector(".cart");
 
 // displaying the Heroes on the main shopping page
 function displayHeroes(){
-    Heroes.services.forEach((hero, index) => {
+    Heroes.services.forEach((hero) => {
         let product = document.createElement("div");
         product.classList.add("product");
         let name = document.createElement("p");
@@ -69,7 +69,7 @@ function displayHeroes(){
         let addToCart = document.createElement("button");
         addToCart.classList.add("add2CartButton")
         addToCart.innerText = "Add to cart";
-        product.append(name, phone, description, price, buyButton);
+        product.append(name, phone, description, price, addToCart);
         HeroesContainer.append(product);
     });
 
