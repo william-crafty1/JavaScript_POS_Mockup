@@ -54,38 +54,40 @@ let HeroesContainer = document.querySelector(".MainShopPage");
 let cartButton = document.querySelector(".cart");
 
 // displaying the Heroes on the main shopping page
-function displayHeroes(){
-    Heroes.services.forEach((hero, index) => {
+function displayHeroes() {
+    Heroes.services.forEach((hero) => {
         let product = document.createElement("div");
         product.classList.add("product");
         let name = document.createElement("p");
         name.innerText = `Name: ${hero.name}`;
-        let phone = document.createElement('p');
+        let phone = document.createElement("p");
         phone.innerText = `Phone: ${hero.phone}`;
-        let description = document.createElement('p');
+        let description = document.createElement("p");
         description.innerText = `Description: ${hero.description}`;
-        let price = document.createElement('p');
+        let price = document.createElement("p");
         price.innerText = `Price: ${hero.price}`;
         let addToCart = document.createElement("button");
-        addToCart.classList.add("add2CartButton")
+        addToCart.classList.add("add2CartButton");
         addToCart.innerText = "Add to cart";
-        product.append(name, phone, description, price, buyButton);
+        product.append(name, phone, description, price, addToCart);
         HeroesContainer.append(product);
     });
-
-};
+}
 
 displayHeroes();
 
 // Adding a product to the cart
 // Count on cart should increase every time the "Add to Cart" button is pressed
-addToCart = document.querySelector(".add2CartButton");
+mainPage = document.querySelector(".MainShopPage");
 let productsInCart = [];
-addToCart.addEventListener("click", (e) => {
+mainPage.addEventListener("click", (e) => {
     e.preventDefault();
-    let quantity = document.createElement("p");
-    quantity.classList.add("cartCount");
-    productsInCart.push(quantity);
-    cartButton.append(quantity);
-    quantity.innerText = productsInCart.length;
+    if (e.target.className === "add2CartButton") {
+        console.log(e.target.className);
+        let quantity = document.createElement("p");
+        quantity.classList.add("cartCount");
+        productsInCart.push(quantity);
+        cartButton.append(quantity);
+        quantity.innerText = productsInCart.length;
+    }
 });
