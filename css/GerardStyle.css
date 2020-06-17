@@ -1,0 +1,145 @@
+.checkout_container {
+    height: auto;
+    max-width: 350px;
+    background-color: #0075B3;
+    box-sizing: border-box;
+    margin: 80px auto;
+    padding: 35px;
+    padding-top: 10px;
+    border-radius: 10px;
+    position: relative;
+}
+
+.payment h2 {
+    text-align: center;
+    letter-spacing: 1px;
+    margin-top: 40px;
+    color: white;
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+.label {
+    display: block;
+    margin-bottom: 8px;
+    margin-top: 15px;
+    color: white;
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+
+.input {
+    padding: 10px;
+    width: 100%;
+    border-radius: 5px;
+    outline: none;
+    padding-right: 0px;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+.card_group {
+    display: flex;
+    justify-content: space-between;
+}
+
+.card_item {
+    width: 42%;
+}
+
+.space {
+    margin-bottom: 20px;
+}
+
+.payment_button {
+    margin-top: 15px;
+    background: #FF0F0D;
+    padding: 12px;
+    text-align: center;
+    width: 100%;
+    border-radius: 5px;
+    color: white;
+    letter-spacing: 10px;
+    font-weight: bolder;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.checkout_logo {
+    position: absolute;
+    top: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 250px;
+    height: 100px;
+    background: #0075B3;
+    border-radius: 5px;
+    text-align: center;
+    line-height: 10px;
+}
+
+.checkout_logo:before {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 240px;
+    height: 70px;
+    background: #FFFB00;
+    border-radius: 5px;
+}
+
+.checkout_logo p {
+    color: black;
+    position: relative;
+    font-size: 37px;
+    font-weight: bolder;
+    letter-spacing: 2px;
+}
+
+.relative_icon {
+    position: relative;
+}
+
+.user, .card_icon, .calendar {
+    height: 25px;
+    width: 25px;
+    position: absolute;
+    bottom: 6px;
+    left: 15px;
+}
+
+.lock_icon {
+    height: 25px;
+    width: 25px;
+    position: absolute;
+    bottom: 7px;
+    right: 82px;
+}
+@media screen and (max-width: 420px){
+    .card_group {
+        flex-direction: column;
+    }
+    .card_item {
+        width: 100%;
+    }
+
+    .relative_icon {
+        position: relative;
+    }
+
+    .lock_icon {
+        height: 25px;
+        width: 25px;
+        position: absolute;
+        bottom: 7px;
+        right: 240px;
+    }
+
+    .calendar {
+        height: 25px;
+        width: 25px;
+        position: absolute;
+        bottom: 87px;
+    }
+}

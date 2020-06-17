@@ -74,5 +74,5 @@ class Payment {
   };
 };
 
-let payment = new Payment(100);
-payment.amountPaid(150)
+// let payment = new Payment(100);
+// payment.amountPaid(150)
