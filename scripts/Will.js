@@ -138,10 +138,14 @@ let numberOfCartItems = [];
 mainPage.addEventListener("click", (e) => {
     e.preventDefault();
     if (e.target.className === "add2CartButton") {
+        // increasing number of items in cart
         itemsInCart++;
+        // creating the little number to display on cart button
         let cartQuantity = document.createElement("p");
         cartQuantity.classList.add("cartCount");
         cartQuantity.innerText = itemsInCart;
+        //when "add to cart" is pressed, creates a new hero based on hero selected which is then added to to a 
+        //separate list of heroes.
         let productChildren = e.target.parentElement.children;
         let heroName = productChildren[0].innerText;
         let heroPhone = productChildren[1].innerText;
@@ -158,7 +162,6 @@ mainPage.addEventListener("click", (e) => {
 
 // Clicking the cart button at the top brings up the cart with the current items inside
 
-let cartPage = document.querySelector(".cart-page");
 cartButton.addEventListener("click", (e) => {
-    cartPage.style.display = "flex";
+    document.getElementById("cart-page").classList.toggle("cart-page");
 });
