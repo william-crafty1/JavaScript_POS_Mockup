@@ -53,10 +53,6 @@ header {
     color: whitesmoke;
     margin: 20px;
     padding: 10px;
-
-/* @media screen and (min-width: 768px) {
-Garrett work flow: scaled vertical mobile flow
-} */
 }
 
 
@@ -67,3 +63,107 @@ Garrett work flow: scaled vertical mobile flow
     border-style: none;
     padding: 10px;
 }
+
+@media screen and (max-width: 768px) {
+    .dheader {
+        display: none;
+    }
+
+    .desktop {
+        display: none;
+    }
+
+    .top {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    header {
+        display: none;
+    }
+
+    .MainShopPage {
+        display: none;
+    }
+
+    .desktop {
+        width: 90%;
+        max-width: 1100px;
+        margin: 0 auto;
+    }
+
+    .dheader {
+        display: flex;
+        background-color: #0075B3;
+        color: #FFFB00;
+        font-family: 'Reem Kufi', sans-serif;
+        padding: 10px;
+        padding-left: 50px;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .dcart{
+        position: relative;
+        padding: 20px;
+        border-radius: 50%;
+        margin-right: 20px;
+        font-size: 20px;
+        border-style: none;
+        color: #0075B3;
+    }
+
+    .dtitle {
+        display: flex;
+        background-color: #0075B3;
+        color: #FFFB00;
+        font-family: 'Reem Kufi', sans-serif;
+        padding: 10px;
+        padding-left: 50px;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .top {
+        width: 100%;
+        height: 400px;
+        background: green;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        justify-content: flex-end;
+        padding-bottom: 50px;
+        margin: 20px 0px 20px 0;
+    }
+
+    .grid-cards {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+        margin-bottom: 40px;
+    }
+    
+    .grid-cards img {
+        width: 100%;
+        height: 150px;
+        margin-bottom: 15px;
+    }
+    
+    .grid-cards h3 {
+        font-size: 15px;
+        margin-bottom: 10px;
+    }
+    
+    .grid-cards a {
+        display: inline-block;
+        padding-top: 10px;
+        color: #0067b8;
+        text-transform: uppercase;
+    }
+    
+    .grid-cards a:hover {
+        opacity: 0.9;
+    }
+}; 
