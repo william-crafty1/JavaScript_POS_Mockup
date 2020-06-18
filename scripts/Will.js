@@ -1,3 +1,4 @@
+
 class Hero {
     constructor(name, phone, description, price) {
         this.name = name;
@@ -30,6 +31,9 @@ class HeroList {
 }
 
 let Heroes = new HeroList();
+let selectedHeroes = new HeroList();
+let itemsInCart = 0;
+
 Heroes.add(
     "Justice Man",
     "555-555-5555",
@@ -47,6 +51,54 @@ Heroes.add(
     "123-456-CURE",
     "I help fight diseases of all shapes and forms, the doctor is IN",
     "$150/hr"
+);
+Heroes.add(
+    "Hero3",
+    "321-112-2311",
+    "I'm a hero",
+    "$500/hr"
+);
+Heroes.add(
+    "Hero4",
+    "321-112-2311",
+    "I'm a hero",
+    "$10/hr"
+);
+Heroes.add(
+    "Hero5",
+    "321-112-2311",
+    "I'm a hero",
+    "$7777/hr"
+);
+Heroes.add(
+    "Hero6",
+    "321-112-2311",
+    "I'm a hero",
+    "$8675309/hr"
+);
+Heroes.add(
+    "Hero7",
+    "321-112-2311",
+    "I'm a hero",
+    "$11/hr"
+);
+Heroes.add(
+    "Hero8",
+    "321-112-2311",
+    "I'm a hero",
+    "$1/hr"
+);
+Heroes.add(
+    "Hero9",
+    "321-112-2311",
+    "I'm a hero",
+    "$5/hr"
+);
+Heroes.add(
+    "Hero10",
+    "321-112-2311",
+    "I'm a hero",
+    "$50/hr"
 );
 console.log(Heroes);
 
@@ -76,18 +128,37 @@ function displayHeroes() {
 
 displayHeroes();
 
+
+
 // Adding a product to the cart
 // Count on cart should increase every time the "Add to Cart" button is pressed
+
 mainPage = document.querySelector(".MainShopPage");
-let productsInCart = [];
+let numberOfCartItems = [];
 mainPage.addEventListener("click", (e) => {
     e.preventDefault();
     if (e.target.className === "add2CartButton") {
-        console.log(e.target.className);
-        let quantity = document.createElement("p");
-        quantity.classList.add("cartCount");
-        productsInCart.push(quantity);
-        cartButton.append(quantity);
-        quantity.innerText = productsInCart.length;
+        itemsInCart++;
+        let cartQuantity = document.createElement("p");
+        cartQuantity.classList.add("cartCount");
+        cartQuantity.innerText = itemsInCart;
+        let productChildren = e.target.parentElement.children;
+        let heroName = productChildren[0].innerText;
+        let heroPhone = productChildren[1].innerText;
+        let heroDescription = productChildren[2].innerText;
+        let heroPrice = productChildren[3].innerText;
+        console.log(productChildren);
+        selectedHeroes.add(heroName, heroPhone, heroDescription, heroPrice)
+        console.log(selectedHeroes);
+        numberOfCartItems.push(itemsInCart);
+        cartButton.append(cartQuantity);
     }
+});
+
+
+// Clicking the cart button at the top brings up the cart with the current items inside
+
+let cartPage = document.querySelector(".cart-page");
+cartButton.addEventListener("click", (e) => {
+    cartPage.style.display = "flex";
 });
