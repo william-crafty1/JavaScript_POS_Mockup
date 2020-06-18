@@ -17,6 +17,33 @@ header {
     justify-content: space-between;
     align-items: center;
 }
+.main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.MainShopPage{
+    display: flex;
+    flex-direction: column;
+}
+
+.product {
+    position: relative;
+    border-radius: 20px;
+    background-color: #0075B3;
+    color: whitesmoke;
+    margin: 20px;
+    padding: 10px;
+
+}
+
+.add2CartButton {
+    background-color: #FF0F0D;
+    border-radius: 20px;
+    color: whitesmoke;
+    border-style: none;
+    padding: 10px;
+}
 
 .cart{
     position: relative;
@@ -40,28 +67,29 @@ header {
     left: 40px;
 }
 
-.MainShopPage{
+.cart-page {
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+    top: 10;
+    left: 10;
+    right: 10;
+    bottom: 10;
+    background-color: #B31412;
+    color: whitesmoke;
+    padding: 10px;
+    margin-top: 10px;
+    margin-left: 60px;
+    width: 350px;
+    height: 500px;
+    z-index: 4;
+}
+
+.cart-items {
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
-}
-
-.product {
-    position: relative;
-    border-radius: 20px;
-    background-color: #0075B3;
-    color: whitesmoke;
-    margin: 20px;
-    padding: 10px;
-}
-
-
-.add2CartButton {
-    background-color: #FF0F0D;
-    border-radius: 20px;
-    color: whitesmoke;
-    border-style: none;
-    padding: 10px;
+    justify-content: center;
+    align-items: center;
 }
 
 @media screen and (max-width: 768px) {
