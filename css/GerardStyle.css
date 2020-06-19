@@ -117,10 +117,201 @@
     right: 82px;
 }
 
-.practice_image {
-    height: 50px;
-    width: 100px;
+.shop-item {
+    margin: 30px;
 }
+
+.shop-item-title {
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+    font-size: 25px;
+    margin-bottom: 15px;
+}
+
+.shop-item-image {
+    height: 100px;
+}
+
+.shop-item-details {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+}
+
+.shop-item-price {
+    flex-grow: 1;
+    margin-right: 10px;
+}
+
+.shop-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.shop-item-button {
+    border-radius: 5px;
+    color: white;
+    background-color: #00A6FF;
+}
+
+.cart-header {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.cart-column {
+    border-bottom: 1px solid black;
+    margin-right: 15px;
+    padding-bottom: 7px;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.cart-row {
+    display: flex;
+    margin-top: 30px;
+}
+
+.cart-item {
+    width: 45%;
+}
+
+.cart-price {
+    width: 20%;
+    font-size: 20px;
+}
+
+.cart-quantity {
+    width: 35%;
+}
+
+.cart-item-title {
+    margin-left: 5px;
+    font-size: 15px;
+}
+
+.cart-item-image {
+    width: 75px;
+    height: auto;
+}
+
+.btn-danger {
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.btn-danger:hover {
+    background-color: darkred;
+}
+
+.cart-quantity-input {
+    height: 34px;
+    width: 50px;
+    border-radius: 5px;
+    border: 1px solid black;
+    background-color: #eee;
+    color: #333;
+    padding: 0;
+    text-align: center;
+    font-size: 15px;
+    margin-right: 25px;
+}
+
+.cart-row:last-child {
+    border-bottom: 1px solid black;
+}
+
+.cart-row:last-child .cart-column {
+    border: none;
+}
+
+.cart-total {
+    text-align: end;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+.cart-total-title {
+    font-weight: bold;
+    font-size: 25px;
+    color: black;
+    margin-right: 20px;
+}
+
+.cart-total-price {
+    font-size: 20px;
+}
+
+.btn-purchase {
+    display: block;
+    margin: 40px auto 80px auto;
+    font-size: 40px;
+    border-radius: 5px;
+    background-color: #00A6FF;
+    color: white;
+}
+
+.btn {
+    text-align: center;
+    vertical-align: middle;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.main-header {
+    background-image: url(http://homefinder.com.my/wp-content/uploads/2016/03/marvel_superheroes.jpg);
+    background-size: cover;
+    height: 300px;
+    padding: 20px;
+}
+
+body {
+    background-color: #FFFB00;
+    font-family: 'Holtwood One SC', serif;
+}
+
+.content-section {
+    padding: 20px;
+}
+
+.hero-title {
+    color: black;
+    text-align: center;
+    font-size: 80px;
+    font-weight: bolder;
+    margin-bottom: 150px;
+    margin-top: 0;
+    font-family: 'Holtwood One SC', serif;
+}
+
+h2 {
+    text-align: center;
+    margin-top: 60px;
+    font-size: 30px;
+    font-family: 'Holtwood One SC', serif;
+    font-weight: bold;
+    text-decoration: underline;
+    margin-bottom: 0;
+}
+
+.section-header {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 30px;
+    font-family: 'Holtwood One SC', serif;
+    font-weight: bold;
+    text-decoration: underline;
+    margin-bottom: 0;
+    color: black;
+}
+
 @media screen and (max-width: 420px){
     .card_group {
         flex-direction: column;
