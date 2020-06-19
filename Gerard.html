@@ -162,6 +162,43 @@
         </div>
         <button class="btn btn-primary btn-purchase" onclick="">PURCHASE</button>
     </section>
+    <title>POS Project</title>
+</head>
+<body>
+    <div class="checkout_container">
+        <div class="payment">
+            <div class="checkout_logo">
+                <p>CHECKOUT</p>
+            </div>
+            <h2>Credit Card Information</h2>
+            <div class="checkout_form">
+                <div class="card_info space relative_icon">
+                    <label class="label">Card holder:</label>
+                    <input type="text" class="input" name="card_holder" placeholder="Name">
+                    <img src="https://cahtc.com/wp-content/uploads/2016/11/user-icon-300x300.png" alt="" class="user">
+                </div>
+                <div class="card_info space relative_icon">
+                    <label class="label">Card number:</label>
+                    <input type="text" class="input" name="card_number" placeholder="Credit card number" maxlength="16">
+                    <img src="https://d1yn1kh78jj1rr.cloudfront.net/image/preview/rDtN98Qoishumwih/storm-0914-icon-credit-card-front-19_SB_PM.jpg" alt="" class="card_icon">
+                </div>
+                <div class="card_group space relative_icon">
+                    <div class="card_item">
+                        <label class="label">Expiry date:</label>
+                        <input type="text" class="input" name="expiry_date" placeholder="00 / 00" maxlength="5">
+                        <img src="https://www.pinclipart.com/picdir/big/81-819138_abstract-submission-deadline-icon-calendar-pink-png-clipart.png" alt="" class="calendar">
+                    </div>
+                    <div class="card_item">
+                        <label class="label">CVV:</label>
+                        <input type="text" class="input" name="CVV" placeholder="000" maxlength="3">
+                        <img src="https://as2.ftcdn.net/jpg/02/49/91/87/500_F_249918719_P1JrbvJCevO076v0J73U1oh4ssgrW2Km.jpg" alt="" class="lock_icon">
+                    </div>   
+                </div>
+
+                <button class="payment_button" id="payment_button" onclick="">PURCHASE</button>
+            </div>
+        </div>
+    </div>
     <script src="scripts/Gerard.js"></script>
 </body>
 </html>

@@ -67,6 +67,7 @@ header {
     left: 40px;
 }
 
+<<<<<<< HEAD
 .cart-page {
     position: fixed;
     justify-content: center;
@@ -195,3 +196,29 @@ header {
         opacity: 0.9;
     }
 }; 
+=======
+.MainShopPage{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.product {
+    position: relative;
+    border-radius: 20px;
+    background-color: #0075B3;
+    color: whitesmoke;
+    margin: 20px;
+    padding: 10px;
+    width: 500px;
+
+}
+
+.add2CartButton {
+    background-color: #FF0F0D;
+    border-radius: 20px;
+    color: whitesmoke;
+    border-style: none;
+    padding: 10px;
+}
+>>>>>>> GD/Credit-card-payment-function
