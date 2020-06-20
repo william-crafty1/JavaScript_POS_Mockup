@@ -1,224 +1,393 @@
-/* Desktop View 
-Garret to do Mobile View*/
-body {
+h1, h2, span {
+    color: #FFFB00;
+}
+
+p {
+    padding: 0;
+    margin: 0;
+    color: #FFFB00;
+}
+
+.company-description{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+    margin-right: 20px;
+    margin-left: 20px;
+    margin-top: 0px;
+}
+
+.logo{
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 10px;
+    font-size: 30px;
+}
+
+.red {
+    color: #faa508;
+    text-decoration: underline;
+}
+.checkout_container {
+    height: auto;
+    max-width: 350px;
+    background-color: #0075B3;
+    box-sizing: border-box;
+    margin: 80px auto;
+    padding: 35px;
+    padding-top: 10px;
+    border-radius: 10px;
+    position: relative;
+    display: none;
+}
+
+.payment h2 {
+    text-align: center;
+    letter-spacing: 1px;
+    margin-top: 40px;
+    color: white;
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+.label {
+    display: block;
+    margin-bottom: 8px;
+    margin-top: 15px;
+    color: white;
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+
+.input {
+    padding: 10px;
+    width: 100%;
+    border-radius: 5px;
+    outline: none;
+    padding-right: 0px;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+.card_group {
+    display: flex;
+    justify-content: space-between;
+}
+
+.card_item {
+    width: 42%;
+}
+
+.space {
+    margin-bottom: 20px;
+}
+
+.payment_button {
+    margin-top: 15px;
+    background: #FF0F0D;
+    padding: 12px;
+    text-align: center;
+    width: 100%;
+    border-radius: 5px;
+    color: white;
+    letter-spacing: 10px;
+    font-weight: bolder;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.checkout_logo {
+    position: absolute;
+    top: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 250px;
+    height: 100px;
+    background: #0075B3;
+    border-radius: 5px;
+    text-align: center;
+    line-height: 10px;
+}
+
+.checkout_logo:before {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 240px;
+    height: 70px;
+    background-color: #0075B3;
+    border-radius: 5px;
+}
+
+.checkout_logo p {
+    color: black;
+    position: relative;
+    font-size: 37px;
+    font-weight: bolder;
+    letter-spacing: 2px;
+}
+
+.relative_icon {
+    position: relative;
+}
+
+.user, .card_icon, .calendar {
+    height: 25px;
+    width: 25px;
+    position: absolute;
+    bottom: 6px;
+    left: 15px;
+}
+
+.lock_icon {
+    height: 25px;
+    width: 25px;
+    position: absolute;
+    bottom: 7px;
+    right: 82px;
+}
+
+.shop-item {
+    margin: 30px;
+    text-align: center;
+}
+
+.shop-item-title {
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+    font-size: 25px;
+    margin-bottom: 15px;
+}
+
+.shop-item-image {
+    height: 300px;
+    width: 400px;
+}
+
+.shop-item-details {
+    display: flex;
+    flex-direction: row;
+    padding: 0px;
+    margin-top: 10px;
+}
+
+.shop-item-price {
+    flex-grow: 1;
+    margin-right: 10px;
+    color: black;
+}
+
+.shop-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.shop-item-button {
+    border-radius: 30px;
+    border-style: none;
+    color: white;
+    background-color: #FF0F0D;
+}
+
+.shop-item-button:hover {
+    background-color: darkred;
+}
+
+.cart-header {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.cart-column {
+    border-bottom: 1px solid black;
+    margin-right: 15px;
+    padding-bottom: 7px;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.cart-row {
+    display: flex;
+    margin-top: 30px;
+}
+
+.cart-item {
+    width: 45%;
+}
+
+.cart-price {
+    width: 20%;
+    font-size: 20px;
+}
+
+.cart-quantity {
+    width: 35%;
+}
+
+.cart-item-title {
+    margin-left: 5px;
+    font-size: 15px;
+}
+
+.cart-item-image {
+    width: 75px;
+    height: auto;
+}
+
+.btn-danger {
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.btn-danger:hover {
+    background-color: darkred;
+}
+
+.cart-quantity-input {
+    height: 34px;
+    width: 50px;
+    border-radius: 5px;
+    border: 1px solid black;
+    background-color: #eee;
+    color: #333;
+    padding: 0;
+    text-align: center;
+    font-size: 15px;
+    margin-right: 25px;
+}
+
+.cart-row:last-child {
+    border-bottom: 1px solid black;
+}
+
+.cart-row:last-child .cart-column {
+    border: none;
+}
+
+.cart-total {
+    text-align: end;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+.cart-total-title {
+    font-weight: bold;
+    font-size: 25px;
+    color: #FFFB00;
+    margin-right: 20px;
+}
+
+.cart-total-price {
+    font-size: 20px;
+}
+
+.btn-purchase {
+    display: block;
+    margin: 40px auto 80px auto;
+    font-size: 40px;
+    border-radius: 40px;
+    border-style: none;
+    background-color: #FF0F0D;
+    color: white;
+}
+
+.btn-purchase:hover{
+    background-color: darkred;
+}
+
+.btn {
+    text-align: center;
+    vertical-align: middle;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.main-header {
+    background-image: url(http://homefinder.com.my/wp-content/uploads/2016/03/marvel_superheroes.jpg);
+    background-size: cover;
+    height: 300px;
+    padding: 20px;
+}
+
+body {
+    background-color: #0075B3;
+    font-family: 'Holtwood One SC', serif;
     margin: 0px;
     height: 100vh;
 }
 
-header {
-    display: flex;
-    background-color: #0075B3;
-    color: #FFFB00;
-    font-family: 'Reem Kufi', sans-serif;
-    padding: 10px;
-    padding-left: 50px;
-    justify-content: space-between;
-    align-items: center;
-}
-.main {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-.MainShopPage{
-    display: flex;
-    flex-direction: column;
-}
-
-.product {
-    position: relative;
-    border-radius: 20px;
-    background-color: #0075B3;
-    color: whitesmoke;
-    margin: 20px;
-    padding: 10px;
-
-}
-
-.add2CartButton {
-    background-color: #FF0F0D;
-    border-radius: 20px;
-    color: whitesmoke;
-    border-style: none;
-    padding: 10px;
-}
-
-.cart{
-    position: relative;
+.content-section {
     padding: 20px;
-    border-radius: 50%;
-    margin-right: 20px;
-    font-size: 20px;
-    border-style: none;
-    color: #0075B3;
-    
+    background-color: black;
 }
 
-.cartCount{
-    background-color: #FF0F0D;
-    color: whitesmoke;
-    border-radius: 50px;
-    position: absolute;
-    font-size: 13px;
-    padding: 5px;
-    bottom: 28px;
-    left: 40px;
+.hero-title {
+    color: #FFFB00;
+    text-align: center;
+    font-size: 80px;
+    font-weight: bolder;
+    margin-bottom: 50px;
+    margin-top: 0;
+    font-family: 'Reem Kufi', sans-serif;
 }
 
-<<<<<<< HEAD
-.cart-page {
-    position: fixed;
-    justify-content: center;
-    align-items: center;
-    top: 10;
-    left: 10;
-    right: 10;
-    bottom: 10;
-    background-color: #B31412;
-    color: whitesmoke;
-    padding: 10px;
-    margin-top: 10px;
-    margin-left: 60px;
-    width: 350px;
-    height: 500px;
-    z-index: 4;
+h2 {
+    text-align: center;
+    margin-top: 60px;
+    font-size: 30px;
+    font-family: 'Reem Kufi', sans-serif;
+    font-weight: bold;
+    text-decoration: underline;
+    margin-bottom: 0;
 }
 
-.cart-items {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+.section-header {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 30px;
+    font-family: 'Reem Kufi', sans-serif;
+    font-weight: bold;
+    text-decoration: underline;
+    margin-bottom: 0;
+    color: #FFFB00;
 }
 
-@media screen and (max-width: 768px) {
-    .dheader {
-        display: none;
-    }
-
-    .desktop {
-        display: none;
-    }
-
-    .top {
-        display: none;
-    }
-}
-
-@media screen and (min-width: 768px) {
-    header {
-        display: none;
-    }
-
-    .MainShopPage {
-        display: none;
-    }
-
-    .desktop {
-        width: 90%;
-        max-width: 1100px;
-        margin: 0 auto;
-    }
-
-    .dheader {
-        display: flex;
-        background-color: #0075B3;
-        color: #FFFB00;
-        font-family: 'Reem Kufi', sans-serif;
-        padding: 10px;
-        padding-left: 50px;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    .dcart{
-        position: relative;
-        padding: 20px;
-        border-radius: 50%;
-        margin-right: 20px;
-        font-size: 20px;
-        border-style: none;
-        color: #0075B3;
-    }
-
-    .dtitle {
-        display: flex;
-        background-color: #0075B3;
-        color: #FFFB00;
-        font-family: 'Reem Kufi', sans-serif;
-        padding: 10px;
-        padding-left: 50px;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    .top {
-        width: 100%;
-        height: 400px;
-        background: green;
-        display: flex;
+@media screen and (max-width: 420px){
+    .card_group {
         flex-direction: column;
-        align-items: center;
-        text-align: center;
-        justify-content: flex-end;
-        padding-bottom: 50px;
-        margin: 20px 0px 20px 0;
     }
-
-    .grid-cards {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        gap: 20px;
-        margin-bottom: 40px;
-    }
-    
-    .grid-cards img {
+    .card_item {
         width: 100%;
-        height: 150px;
-        margin-bottom: 15px;
     }
-    
-    .grid-cards h3 {
-        font-size: 15px;
-        margin-bottom: 10px;
-    }
-    
-    .grid-cards a {
-        display: inline-block;
-        padding-top: 10px;
-        color: #0067b8;
-        text-transform: uppercase;
-    }
-    
-    .grid-cards a:hover {
-        opacity: 0.9;
-    }
-}; 
-=======
-.MainShopPage{
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-}
 
-.product {
-    position: relative;
-    border-radius: 20px;
-    background-color: #0075B3;
-    color: whitesmoke;
-    margin: 20px;
-    padding: 10px;
-    width: 500px;
+    .relative_icon {
+        position: relative;
+    }
 
-}
+    .lock_icon {
+        height: 25px;
+        width: 25px;
+        position: absolute;
+        bottom: 7px;
+        right: 240px;
+    }
 
-.add2CartButton {
-    background-color: #FF0F0D;
-    border-radius: 20px;
-    color: whitesmoke;
-    border-style: none;
-    padding: 10px;
+    .calendar {
+        height: 25px;
+        width: 25px;
+        position: absolute;
+        bottom: 87px;
+    }
 }
->>>>>>> GD/Credit-card-payment-function

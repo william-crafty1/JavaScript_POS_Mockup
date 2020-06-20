@@ -1,3 +1,36 @@
+h1, h2, span {
+    color: #FFFB00;
+}
+
+p {
+    padding: 0;
+    margin: 0;
+    color: #FFFB00;
+}
+
+.company-description{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+    margin-right: 20px;
+    margin-left: 20px;
+    margin-top: 0px;
+}
+
+.logo{
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: center;
+    padding: 10px;
+    font-size: 30px;
+}
+
+.red {
+    color: #faa508;
+    text-decoration: underline;
+}
 .checkout_container {
     height: auto;
     max-width: 350px;
@@ -86,7 +119,7 @@
     left: 5px;
     width: 240px;
     height: 70px;
-    background: #FFFB00;
+    background-color: #0075B3;
     border-radius: 5px;
 }
 
@@ -120,6 +153,7 @@
 
 .shop-item {
     margin: 30px;
+    text-align: center;
 }
 
 .shop-item-title {
@@ -132,18 +166,21 @@
 }
 
 .shop-item-image {
-    height: 100px;
+    height: 300px;
+    width: 400px;
 }
 
 .shop-item-details {
     display: flex;
-    align-items: center;
-    padding: 5px;
+    flex-direction: row;
+    padding: 0px;
+    margin-top: 10px;
 }
 
 .shop-item-price {
     flex-grow: 1;
     margin-right: 10px;
+    color: black;
 }
 
 .shop-items {
@@ -153,9 +190,14 @@
 }
 
 .shop-item-button {
-    border-radius: 5px;
+    border-radius: 30px;
+    border-style: none;
     color: white;
-    background-color: #00A6FF;
+    background-color: #FF0F0D;
+}
+
+.shop-item-button:hover {
+    background-color: darkred;
 }
 
 .cart-header {
@@ -242,7 +284,7 @@
 .cart-total-title {
     font-weight: bold;
     font-size: 25px;
-    color: black;
+    color: #FFFB00;
     margin-right: 20px;
 }
 
@@ -254,9 +296,14 @@
     display: block;
     margin: 40px auto 80px auto;
     font-size: 40px;
-    border-radius: 5px;
-    background-color: #00A6FF;
+    border-radius: 40px;
+    border-style: none;
+    background-color: #FF0F0D;
     color: white;
+}
+
+.btn-purchase:hover{
+    background-color: darkred;
 }
 
 .btn {
@@ -274,29 +321,32 @@
 }
 
 body {
-    background-color: #FFFB00;
+    background-color: #0075B3;
     font-family: 'Holtwood One SC', serif;
+    margin: 0px;
+    height: 100vh;
 }
 
 .content-section {
     padding: 20px;
+    background-color: black;
 }
 
 .hero-title {
-    color: black;
+    color: #FFFB00;
     text-align: center;
     font-size: 80px;
     font-weight: bolder;
-    margin-bottom: 150px;
+    margin-bottom: 50px;
     margin-top: 0;
-    font-family: 'Holtwood One SC', serif;
+    font-family: 'Reem Kufi', sans-serif;
 }
 
 h2 {
     text-align: center;
     margin-top: 60px;
     font-size: 30px;
-    font-family: 'Holtwood One SC', serif;
+    font-family: 'Reem Kufi', sans-serif;
     font-weight: bold;
     text-decoration: underline;
     margin-bottom: 0;
@@ -306,11 +356,11 @@ h2 {
     text-align: center;
     margin-top: 30px;
     font-size: 30px;
-    font-family: 'Holtwood One SC', serif;
+    font-family: 'Reem Kufi', sans-serif;
     font-weight: bold;
     text-decoration: underline;
     margin-bottom: 0;
-    color: black;
+    color: #FFFB00;
 }
 
 @media screen and (max-width: 420px){
