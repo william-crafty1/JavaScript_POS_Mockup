@@ -105,12 +105,14 @@ function showPayment(){
 
 let checkoutButton = document.getElementsByClassName("payment_button")[0];
 checkoutButton.addEventListener("click", (e) => {
+    let checkout = document.getElementById("checkout_container");
     alert("Thank you for your purchase!");
     let cartItems = document.getElementsByClassName("cart-items")[0];
     while (cartItems.hasChildNodes()) {
         cartItems.removeChild(cartItems.firstChild);
     }
     updateCartTotal();
+    checkout.style.display = "none";
 });
 function purchaseClicked() {
 }
