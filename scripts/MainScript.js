@@ -98,19 +98,16 @@ for (let i = 0; i < addToCartButtons.length; i++) {
     button.addEventListener("click", addToCartClicked);
 }
 
-// Uses the "Purchase" button to listen for a "click" that will run the "purchasedClicked" function
-document
-    .getElementsByClassName("btn-purchase")[0]
-    .addEventListener("click", purchaseClicked);
-
-// Function used to alert the user that they have purchased some items, completely clears the cart, and updates the total cost back to 0
-function purchaseClicked() {
+let checkoutButton = document.getElementsByClassName("payment_button")[0];
+checkoutButton.addEventListener("click", (e) => {
     alert("Thank you for your purchase!");
     let cartItems = document.getElementsByClassName("cart-items")[0];
     while (cartItems.hasChildNodes()) {
         cartItems.removeChild(cartItems.firstChild);
     }
     updateCartTotal();
+});
+function purchaseClicked() {
 }
 
 // Function used to make the "Remove" buttons actually remove items from the cart while updating the total cost
