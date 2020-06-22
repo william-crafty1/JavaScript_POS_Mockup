@@ -98,11 +98,13 @@ for (let i = 0; i < addToCartButtons.length; i++) {
     button.addEventListener("click", addToCartClicked);
 }
 
+// displays card info page
 function showPayment(){
     let checkout = document.getElementById("checkout_container");
     checkout.style.display = "block"
 }
 
+// purchasing items, removes card info container afterwards
 let checkoutButton = document.getElementsByClassName("payment_button")[0];
 checkoutButton.addEventListener("click", (e) => {
     let checkout = document.getElementById("checkout_container");
@@ -114,8 +116,6 @@ checkoutButton.addEventListener("click", (e) => {
     updateCartTotal();
     checkout.style.display = "none";
 });
-function purchaseClicked() {
-}
 
 // Function used to make the "Remove" buttons actually remove items from the cart while updating the total cost
 function removeCartItem(event) {
