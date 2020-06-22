@@ -42,6 +42,7 @@ p {
     padding-top: 10px;
     border-radius: 10px;
     position: relative;
+    display: none;
 }
 
 .payment h2 {
@@ -301,6 +302,7 @@ p {
     border-style: none;
     background-color: #FF0F0D;
     color: white;
+    padding: 10px;
 }
 
 .btn-purchase:hover{

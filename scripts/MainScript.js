@@ -98,6 +98,11 @@ for (let i = 0; i < addToCartButtons.length; i++) {
     button.addEventListener("click", addToCartClicked);
 }
 
+function showPayment(){
+    let checkout = document.getElementById("checkout_container");
+    checkout.style.display = "block"
+}
+
 let checkoutButton = document.getElementsByClassName("payment_button")[0];
 checkoutButton.addEventListener("click", (e) => {
     alert("Thank you for your purchase!");
